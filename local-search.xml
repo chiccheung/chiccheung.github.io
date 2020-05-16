@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Java 学习笔记 1-3：面向对象基础</title>
+    <link href="/undefined/6e8246c4.html"/>
+    <url>/undefined/6e8246c4.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h2><p><em>类是抽象的模板，对象是一个实例</em></p><ul><li>类：是一组相关的属性和行为的集合</li><li>对象：是该类事物的具体体现</li><li>例：<ul><li>类——学生</li><li>对象——班长</li></ul></li></ul><h2 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h2><h3 id="现实世界的事物"><a href="#现实世界的事物" class="headerlink" title="现实世界的事物"></a>现实世界的事物</h3><ul><li>属性：事物的描述信息</li><li>行为：事物能做什么</li></ul><h3 id="Java-中的类"><a href="#Java-中的类" class="headerlink" title="Java 中的类"></a>Java 中的类</h3><ul><li>成员变量：事物的属性</li><li>成员方法：事物的行为</li></ul><h2 id="对象的使用"><a href="#对象的使用" class="headerlink" title="对象的使用"></a>对象的使用</h2><ul><li>创建对象：<code>类名 对象名 = new 类名();</code></li><li>使用成员变量：<code>对象名.成员变量;</code></li><li>使用成员方法：<code>对象名.成员方法;</code></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>学习路线</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java 学习笔记 1-2：Java 基础语法（下）</title>
+    <link href="/undefined/2ebd720.html"/>
+    <url>/undefined/2ebd720.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="数组的定义和访问"><a href="#数组的定义和访问" class="headerlink" title="数组的定义和访问"></a>数组的定义和访问</h2><h3 id="容器和数组"><a href="#容器和数组" class="headerlink" title="容器和数组"></a>容器和数组</h3><p>容器：将多个数据存储到一起，每个数据称为该容器的元素</p><p>数组：存储数据长度固定的容器，数据类型必须一致。既可以存储基本数据类型，也可以存储引用数据类型。</p><h3 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h3><ul><li><p>方式一：</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">//数组存储的数据类型[] 数组名字 = new 数组存储的数据类型[长度]; </span><span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>];</code></pre></div><p>数组定义格式详解： </p><ul><li><p>数组存储的数据类型： 创建的数组容器可以存储什么数据类型。 </p></li><li><p>[] : 表示数组。 </p></li><li><p>数组名字：为定义的数组起个变量名，满足标识符规范，可以使用名字操作数组。 </p></li><li><p>new：关键字，创建数组使用的关键字。 </p></li><li><p>数组存储的数据类型： 创建的数组容器可以存储什么数据类型。 </p></li><li><p>[长度]：数组的长度，表示数组容器中可以存储多少个元素。 </p></li><li><p>数组的长度一旦指定，不可更改。  </p></li></ul></li><li><p>方式二：</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">//数据类型[] 数组名 = new 数据类型[]&#123;元素1,元素2,元素3...&#125;; </span><span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;;</code></pre></div></li><li><p>方式三：</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">//数据类型[] 数组名 = &#123;元素1,元素2,元素3...&#125;; </span><span class="hljs-keyword">int</span>[] arr = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;;</code></pre></div></li></ul><h3 id="数组的访问"><a href="#数组的访问" class="headerlink" title="数组的访问"></a>数组的访问</h3><ul><li><p>索引(index)： 每一个存储到数组的元素，都会获得一个从 <code>0</code> 开始的编号，这个编号称为索引。</p></li><li><p>数组的长度属性： 每个数组长度固定，获取到数组长度的语句为：<code>数组名.length</code>  ，返回值类型为 <code>int</code> 。</p></li><li><p>最大索引为 <code>数组名.length - 1</code> 。</p></li><li><p>数组元素的获取与赋值：</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;    <span class="hljs-comment">//定义存储int类型数组，赋值元素1，2，3，4，5</span>  <span class="hljs-keyword">int</span>[] arr = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;;    <span class="hljs-comment">//为0索引元素赋值为6</span>  arr[<span class="hljs-number">0</span>] = <span class="hljs-number">6</span>;    <span class="hljs-comment">//获取数组0索引上的元素</span>  <span class="hljs-keyword">int</span> i = arr[<span class="hljs-number">0</span>];  System.out.println(i);    <span class="hljs-comment">//直接输出数组0索引元素</span>  System.out.println(arr[<span class="hljs-number">0</span>]);&#125;</code></pre></div></li></ul><h2 id="JVM-的内存划分"><a href="#JVM-的内存划分" class="headerlink" title="JVM 的内存划分"></a><code>JVM</code> 的内存划分</h2><table><thead><tr><th align="center">区域名称</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">寄存器</td><td align="center">提供给 <code>CPU</code> 来使用</td></tr><tr><td align="center">本地方法栈</td><td align="center"><code>JVM</code> 使用操作系统功能时使用</td></tr><tr><td align="center">方法区</td><td align="center">存储可以运行的字节码文件</td></tr><tr><td align="center">堆内存</td><td align="center">存储通过 <code>new</code> 创建的对象或数组</td></tr><tr><td align="center">方法栈</td><td align="center">方法运行时使用的内存</td></tr></tbody></table><h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><p><em>数组作为方法参数传递，传递的参数是数组内存的地址</em></p><h3 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h3><p><em>数组遍历： 将数组中的每个元素分别获取出来</em></p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;  <span class="hljs-keyword">int</span>[] arr = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> &#125;;  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++)&#123;    System.out.println(arr[i]);  &#125;&#125;</code></pre></div><h3 id="数组元素最大值"><a href="#数组元素最大值" class="headerlink" title="数组元素最大值"></a>数组元素最大值</h3><p><em>从数组的所有元素中找出最大值</em></p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;   <span class="hljs-keyword">int</span>[] arr = &#123; <span class="hljs-number">5</span>, <span class="hljs-number">15</span>, <span class="hljs-number">2000</span>, <span class="hljs-number">10000</span>, <span class="hljs-number">100</span>, <span class="hljs-number">4000</span> &#125;;     <span class="hljs-comment">//定义变量，保存数组中0索引的元素 </span>  <span class="hljs-keyword">int</span> max = arr[<span class="hljs-number">0</span>];     <span class="hljs-comment">//取出每个元素和 max 比较,大于 max 则记录</span>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++)&#123;    <span class="hljs-keyword">if</span> (arr[i] &gt; max)&#123;      max = arr[i];     &#125;   &#125;  System.out.println(<span class="hljs-string">"数组最大值是： "</span> + max); &#125;</code></pre></div><h3 id="数组反转"><a href="#数组反转" class="headerlink" title="数组反转"></a>数组反转</h3><p><em>将数组中的元素颠倒顺序</em></p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;     <span class="hljs-keyword">int</span>[] arr = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> &#125;;     <span class="hljs-comment">/*循环中定义变量min=0最小索引 </span><span class="hljs-comment">  max=arr.length‐1最大索引 </span><span class="hljs-comment">  min++,max‐‐ </span><span class="hljs-comment">  */</span>     <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> min = <span class="hljs-number">0</span>, max = arr.length ‐ <span class="hljs-number">1</span>;       min &lt;= max;      min++, max‐‐)&#123;    <span class="hljs-comment">//利用第三方变量完成数组中的元素交换 </span>    <span class="hljs-keyword">int</span> temp = arr[min];     arr[min] = arr[max];     arr[max] = temp;   &#125;<span class="hljs-comment">// 反转后，遍历数组 </span>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;     System.out.println(arr[i]);   &#125; &#125;</code></pre></div><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><ul><li><p>数组索引越界 <code>ArrayIndexOutOfBoundsException</code></p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;  <span class="hljs-keyword">int</span>[] arr = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;  System.out.println(arr[<span class="hljs-number">3</span>]);&#125;</code></pre></div></li><li><p>空指针异常 <code>NullPointerException</code></p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;  <span class="hljs-keyword">int</span>[] arr = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;  arr = <span class="hljs-keyword">null</span>;  System.out.println(arr[<span class="hljs-number">0</span>]);｝</code></pre></div></li></ul><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><em>完成特定功能的代码块</em></p><div class="hljs"><pre><code class="hljs java">修饰符 返回值类型 方法名(参数类型 参数名<span class="hljs-number">1</span>，参数类型 参数名<span class="hljs-number">2</span>…)&#123;函数主体代码;<span class="hljs-keyword">return</span> 返回值;&#125;</code></pre></div><p>写方法前需要考虑 返回值类型 和 参数列表 怎么写</p><h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><p><em>在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</em></p><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>与返回值类型无关，只看方法名和参数列表</li><li>在调用时，JVM 通过参数列表的不同来区分同名方法</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>学习路线</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java 学习笔记 1-1：Java 基础语法（上）</title>
+    <link href="/undefined/fef6955d.html"/>
+    <url>/undefined/fef6955d.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2><ul><li>Java 之父 —— James Gosling</li><li>1995 年 Java 语言诞生</li><li>1996 年 Sun公司 (Stanford University Network) 发布 Java 1.0 </li><li>2009 年 Oracle 公司收购 Sun 公司 </li><li>2014 年 发布 JDK 8 </li><li>截至 2020 年，最新的长期支持版本是 JDK 11 </li><li>Java 语言平台包括：<ul><li>Java SE：桌面端开发</li><li>Java ME：移动端开发（被 Android 替代）</li><li>Jave EE：企业级开发    </li></ul></li></ul><h2 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h2><h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p><em>计算机中全部采用二进制数表示，它只包含 0、1两个数，逢二进一。每一个0或者每一个1，叫做一个bit（比特）。</em></p><ul><li><p><strong>十进制转二进制：</strong>辗转相除法/除二取余法</p><p><img src="https://gitee.com/chiccheung/uPic/raw/master/uPic/111.jpg" srcset="/img/loading.gif" alt="111"></p></li></ul><ul><li><p><strong>二进制转十进制：</strong>各位数字累加求和（8421 编码）</p><p><img src="https://gitee.com/chiccheung/uPic/raw/master/uPic/112.jpg" srcset="/img/loading.gif" alt="112"></p></li></ul><h3 id="字节-Byte"><a href="#字节-Byte" class="headerlink" title="字节 / Byte"></a>字节 / Byte</h3><p><em>计算机内的最小存储单元</em></p><p>8个bit（二进制位） 0000-0000表示为1个字节，写成 1 byte 或者 1 B</p><ul><li>8 bit  =  1 Byte</li><li>1024 B = 1 KB</li><li>1024 KB = 1 MB</li><li>1024 MB = 1 GB</li><li>1024 GB = 1 TB</li></ul><h3 id="常用-DOS-命令"><a href="#常用-DOS-命令" class="headerlink" title="常用 DOS 命令"></a>常用 DOS 命令</h3><table><thead><tr><th align="center"><center><strong>命令</strong></center></th><th align="center"><center><strong>操作</strong></center></th></tr></thead><tbody><tr><td align="center"><code>C:</code></td><td align="center">切换 C 盘</td></tr><tr><td align="center"><code>dir</code></td><td align="center">列出当前目录下的文件</td></tr><tr><td align="center"><code>cd</code></td><td align="center">进入文件夹</td></tr><tr><td align="center"><code>cd ..</code></td><td align="center">退回上一级目录</td></tr><tr><td align="center"><code>cd \</code></td><td align="center">移动到根目录</td></tr><tr><td align="center"><code>cls</code></td><td align="center">清屏</td></tr></tbody></table><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><h3 id="JRE-amp-JDK"><a href="#JRE-amp-JDK" class="headerlink" title="JRE &amp; JDK"></a>JRE &amp; JDK</h3><ul><li><p>JRE 包括：JVM（Java 虚拟机）、核心类库</p></li><li><p>JDK 包括：JRE ，开发工具</p></li><li><p>运行 Java 程序可安装 JRE/JDK，开发需要安装 JDK</p></li></ul><h3 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h3><ul><li><p>所谓跨平台性，即一次编写，到处运行</p></li><li><p>Java 源码经过编译，会生成 <code>.class</code> 后缀的字节码文件，再经过 JVM 翻译为机器码供机器运行</p></li><li><p>各操作系统均存在相应版本的 JVM，因此 Java 具有良好的跨平台性和可移植性</p><p><img src="https://gitee.com/chiccheung/uPic/raw/master/uPic/113.jpg" srcset="/img/loading.gif" alt="113"></p></li></ul><h3 id="Open-JDK-amp-Oracle-JDK"><a href="#Open-JDK-amp-Oracle-JDK" class="headerlink" title="Open JDK &amp; Oracle JDK"></a>Open JDK &amp; Oracle JDK</h3><ul><li>部分 Oracle JDK 未开源的代码，由 Open JDK 重新编写</li></ul><h3 id="OpenJDK-两种安装方式："><a href="#OpenJDK-两种安装方式：" class="headerlink" title="OpenJDK 两种安装方式："></a>OpenJDK 两种安装方式：</h3><ul><li><p><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA</a> 可在创建项目时下载 <a href="https://openjdk.java.net" target="_blank" rel="noopener">OpenJDK</a></p></li><li><p>在 macOS 下，可以使用 <a href="https://brew.sh" target="_blank" rel="noopener">Homebrew</a> 安装 <a href="https://openjdk.java.net" target="_blank" rel="noopener">OpenJDK</a>，命令如下：</p><p><code>brew install openjdk</code></p></li></ul><h2 id="入门程序"><a href="#入门程序" class="headerlink" title="入门程序"></a>入门程序</h2><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">// 打印 Hello World！语句 </span><span class="hljs-keyword">public</span> calss HelloWorld&#123;  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;    System.out.println(<span class="hljs-string">"Hello World!\n"</span>);  &#125;&#125;</code></pre></div><p><em><code>main</code> 方法是程序执行的起点</em></p><ul><li><p><strong>编译</strong>：将 Java 源文件编译成 <code>.class</code> 后缀文件，在此过程中， 编译器会检查是否有语法上的错误。 </p></li><li><p><strong>运行</strong>：将 <code>.class</code> 文件交给 JVM，翻译为机器码并执行。</p></li><li><p><strong>注释：为代码增加可读性</strong></p><ul><li>单行注释：以 <code>//</code> 开头，换行结束</li><li>多行注释：以 <code>/*</code> 开头，  <code>*/</code> 结束 </li><li>文档注释：以 <code>/**</code> 开头， <code>*/</code> 结束</li></ul></li><li><p>编译命令：<code>javac Java源文件名.后缀名</code> </p><p>例：<code>javac HelloWorld.java</code></p></li><li><p>运行命令：<code>java 类名</code></p><p>例：<code>java HelloWorld</code></p></li></ul><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><p><em>Java 预先定义的标识符，具有特殊含义</em></p><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p><em>用于标识 包，类，方法，变量</em></p><h3 id="命名规则："><a href="#命名规则：" class="headerlink" title="命名规则："></a>命名规则：</h3><ul><li><p>可以包含字母，数字，美元符号和下划线。 </p></li><li><p>不能以数字开头。</p></li><li><p>不能是关键字。</p></li></ul><h3 id="命名规范："><a href="#命名规范：" class="headerlink" title="命名规范："></a>命名规范：</h3><ul><li><p>类名：首字母大写，后面每个单词首字母大写（大驼峰式）；</p></li><li><p>方法名： 首字母小写，后面每个单词首字母大写（小驼峰式）；</p></li><li><p>变量名：全部小写。</p></li></ul><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>分为：整数常量，小数常量，字符常量（单引号，一个字符，必须有内容)，字符串常量（双引号，可以为空），布尔常量，空常量（null）。</p><p><img src="https://gitee.com/chiccheung/uPic/raw/master/uPic/114.jpg" srcset="/img/loading.gif" alt="114"></p><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p><em>变量名称：在同一个大括号范围内，变量的名字不可以相同</em></p><p><em>变量赋值：定义的变量，不赋值不能使用</em></p><p><strong>基本数据类型</strong>：包括整型，浮点型，字符型，布尔型。</p><p><strong>引用数据类型</strong>：包括类，数组，接口。</p><table><thead><tr><th><strong>数据类型</strong></th><th><strong>关键字</strong></th><th>占用字节数</th><th><strong>取值范围</strong></th></tr></thead><tbody><tr><td>字节型</td><td>byte</td><td>1</td><td>-128~127</td></tr><tr><td>短整型</td><td>short</td><td>2</td><td>-32768~32767</td></tr><tr><td>整型</td><td>int（默认）</td><td>4</td><td>-(2^31)~2^(31-1)</td></tr><tr><td>长整型</td><td>long</td><td>8</td><td>-(2^63)~2^(63-1)</td></tr><tr><td>单精度浮点数</td><td>float</td><td>4</td><td>1.4013E-45~3.4028E+38</td></tr><tr><td>双精度浮点数</td><td>double（默认）</td><td>8</td><td>4.9E-324~1.7977E+308</td></tr><tr><td>字符型</td><td>char</td><td>2</td><td>0-65535</td></tr><tr><td>布尔型</td><td>boolean</td><td>1</td><td>true，false</td></tr></tbody></table><p><em>long类型：建议数据后加 L。</em></p><p><em>float类型：建议数据后加 F。</em></p><p><strong>语法</strong>：数据类型 变量名 = 数据值; </p><p>如： <code>int num = 0;</code></p><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><em>自动转换是 Java 自动执行的，而显示转换需要我们自己手动执行</em></p><p>隐式转换：byte、short、char - int - long - float - double</p><p>显示转换：<code>数据类型 变量名 = （数据类型）被转数据值；</code></p><h2 id="ASCII-编码表"><a href="#ASCII-编码表" class="headerlink" title="ASCII 编码表"></a>ASCII 编码表</h2><p><em>编码表 ：就是将人类的文字和一个十进制数进行对应起来组成一张表格。</em></p><p><em>ASCII 编码表（ American Standard Code for Information Interchange 美国标准信息交换码）</em></p><table><thead><tr><th align="center">字符</th><th align="center">数字</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">48</td></tr><tr><td align="center">9</td><td align="center">57</td></tr><tr><td align="center">a</td><td align="center">65</td></tr><tr><td align="center">z</td><td align="center">90</td></tr><tr><td align="center">A</td><td align="center">97</td></tr><tr><td align="center">Z</td><td align="center">122</td></tr></tbody></table><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p><em>对常量和变量进行操作的符号称为运算符</em></p><ul><li>算术运算符：<code>+，-，*，/，%，++，--</code><ul><li><em>整数相除只能得到整数，要想得到小数，就必须有浮点数参与运算</em></li><li><em>模运算 <code>%</code> 常用来判断一个数是否可以被另一个数整除</em></li><li><em><code>++</code> 和 <code>--</code> 在前面时，如： <code>int count = ++i;</code> <code>i</code> 先自增 <code>1</code> ，再被赋值给 <code>count</code>，在后面时，先被赋值，再自增</em></li><li>对字符串使用 <code>+</code> ，做的不是加法运算，而是字符串拼接。</li><li>字符串和其他类型的数据做拼接，得到的是字符串类型。</li></ul></li><li>赋值运算符：<code>=，+=，-=，*=，/=，%=</code></li><li>关系运算符：<code>==，!=，&gt;，&gt;=，&lt;，&lt;=</code></li><li>逻辑运算符：<code>&amp;，|，^，!，&amp;&amp;，||</code><ul><li><em><code>&amp;&amp;</code> 和 <code>&amp;</code>的最终结果一样。但 <code>&amp;&amp;</code> 具有短路效果。</em></li><li><em><code>||</code> 和 <code>|</code> 同理。</em></li></ul></li><li>三元运算符<ul><li>例： <code>int choice = (a==b)?30:40;</code></li><li>如果 <code>a==b</code> 为 <code>true</code>，<code>choice</code> 是 <code>30</code></li><li>如果 <code>a==b</code> 为 <code>false</code>，<code>choice</code> 是 <code>40</code></li></ul></li></ul><h2 id="接收输入：Scanner"><a href="#接收输入：Scanner" class="headerlink" title="接收输入：Scanner"></a>接收输入：Scanner</h2><ul><li>导包<ul><li><code>import java.util.Scanner;</code></li></ul></li><li>创建对象<ul><li><code>Scanner sc = new Scanner(System.in);</code></li></ul></li><li>接收数据<ul><li><code>int num = sc.nextInt();</code></li></ul></li></ul><h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><ul><li><p>顺序执行：从上到下，逐行执行</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;  <span class="hljs-comment">//顺序执行，根据编写的顺序，从上到下运行 </span>  System.out.println(<span class="hljs-number">1</span>);   System.out.println(<span class="hljs-number">2</span>);   System.out.println(<span class="hljs-number">3</span>);&#125;</code></pre></div></li><li><p>判断执行：</p><ul><li><p>if 语句</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(判断条件<span class="hljs-number">1</span>)&#123;  执行语句<span class="hljs-number">1</span>;&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(判断条件<span class="hljs-number">2</span>)&#123;  执行语句<span class="hljs-number">2</span>;&#125;...<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(判断条件n)&#123;  执行语句n;&#125;<span class="hljs-keyword">else</span>&#123;  执行语句n+<span class="hljs-number">1</span>;&#125;</code></pre></div></li><li><p>switch 语句</p><p><em>表达式的数据类型，可以是byte，short，int，char，enum（枚举），JDK7后可以接收字符串</em></p><div class="hljs"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;  <span class="hljs-comment">//定义变量，判断是星期几</span>  <span class="hljs-keyword">int</span> weekday = <span class="hljs-number">6</span>;   <span class="hljs-comment">//switch语句实现选择 </span>  <span class="hljs-keyword">switch</span>(weekday) &#123;    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:      System.out.println(<span class="hljs-string">"星期一"</span>);       <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:      System.out.println(<span class="hljs-string">"星期二"</span>);       <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:      System.out.println(<span class="hljs-string">"星期三"</span>);      <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:      System.out.println(<span class="hljs-string">"星期四"</span>);      <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:      System.out.println(<span class="hljs-string">"星期五"</span>);      <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:      System.out.println(<span class="hljs-string">"星期六"</span>);      <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:      System.out.println(<span class="hljs-string">"星期日"</span>);      <span class="hljs-keyword">break</span>;    <span class="hljs-keyword">default</span>:      System.out.println(<span class="hljs-string">"你输入的数字有误"</span>);      <span class="hljs-keyword">break</span>;  &#125;&#125;</code></pre></div></li></ul></li><li><p>循环执行：</p><ul><li><p>for 循环</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">/*</span><span class="hljs-comment">for(初始化表达式①; 布尔表达式②; 步进表达式④)&#123;</span><span class="hljs-comment">  循环体③</span><span class="hljs-comment">&#125;</span><span class="hljs-comment">*/</span><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; <span class="hljs-number">10</span>; x++) &#123;  System.out.println(<span class="hljs-string">"HelloWorld"</span>+x);&#125;</code></pre></div></li><li><p>while 循环</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">/*</span><span class="hljs-comment">初始化表达式① </span><span class="hljs-comment">while(布尔表达式②)&#123;</span><span class="hljs-comment">  循环体③</span><span class="hljs-comment">  步进表达式④</span><span class="hljs-comment">&#125;</span><span class="hljs-comment">*/</span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;  <span class="hljs-comment">//打印 10 次 HelloWorld</span>    <span class="hljs-comment">//定义初始化变量</span>  <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;    <span class="hljs-comment">//循环条件 &lt;= 10</span>  <span class="hljs-keyword">while</span>(i&lt;=<span class="hljs-number">10</span>&#123;    System.out.println(<span class="hljs-string">"HelloWorld"</span>);     <span class="hljs-comment">//步进</span>    i++;  &#125;&#125;</code></pre></div></li><li><p>do-while 循环</p><div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">/*</span><span class="hljs-comment">初始化表达式① </span><span class="hljs-comment">do&#123;</span><span class="hljs-comment">循环体③ 步进表达式④</span><span class="hljs-comment">&#125;while(布尔表达式②);</span><span class="hljs-comment">*/</span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;   <span class="hljs-keyword">int</span> x=<span class="hljs-number">1</span>;  <span class="hljs-keyword">do</span>&#123;    System.out.println(<span class="hljs-string">"HelloWorld"</span>);    x++;  &#125;<span class="hljs-keyword">while</span>(x&lt;=<span class="hljs-number">10</span>);&#125;</code></pre></div></li></ul></li></ul><ul><li><p>跳转控制：</p><ul><li>continue 语句结束本次循环，继续下一次的循环</li><li>break 语句：终止switch或者循环</li></ul></li><li><p>其他循环：</p><ul><li>死循环：没有步进语句或跳出语句</li><li>嵌套循环：循环内再循环，如二维数组遍历</li></ul></li></ul><h2 id="随机数生成：Random"><a href="#随机数生成：Random" class="headerlink" title="随机数生成：Random"></a>随机数生成：Random</h2><ul><li>导包<ul><li><code>import java.util.Random;</code></li></ul></li><li>创建对象<ul><li><code>Random r = new Random();</code></li></ul></li><li>产生 0~10 范围内的随机整数<ul><li><code>int rand_num = r.nextInt(10);</code></li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>学习路线</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java 学习路线</title>
+    <link href="/undefined/b4562164.html"/>
+    <url>/undefined/b4562164.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul><li>编程语言：Java Python C 基本语法</li><li>基本网络知识：TCP/IP HTTP/HTTPS</li></ul><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul><li>操作系统：Linux (CentOS/Ubuntu/Fe..)</li><li>代码管理：SVN/Git</li><li>持续集成(CI/CD): Jenkins</li><li>Java 项目管理：Maven/Gradle</li></ul><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><ul><li>SSH: <del>Spring + Structs + Hibernate</del></li><li>SSM: Spring + SpringMVC + Mybatis</li><li>Spring Boot</li></ul><h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><ul><li>MQ 消息队列</li><li>RPC 通讯框架 gRPC thrift dubbo springcloud</li><li>elasticsearch 收索引擎 数据库</li></ul><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul><li>SQL：mysql/postgre sql</li><li>Nosql: Redis memcached mongodb elasticsearch</li></ul><h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><ul><li>分布式/微服务架构</li><li>Spring Cloud</li><li>dubbo</li><li>RPC 通信</li></ul><h2 id="虚拟化-容器化"><a href="#虚拟化-容器化" class="headerlink" title="虚拟化/容器化"></a>虚拟化/容器化</h2><ul><li>Docker 容器化</li><li>k8s kubernetes</li></ul><h2 id="源码-性能"><a href="#源码-性能" class="headerlink" title="源码/性能"></a>源码/性能</h2><ul><li>JDK 源码以及部分设计思想</li><li>Spring 源码</li><li>JVM 细节与排错</li><li>高并发/高可用</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>学习路线</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java 书籍推荐</title>
+    <link href="/undefined/4eb8fc00.html"/>
+    <url>/undefined/4eb8fc00.html</url>
+    
+    <content type="html"><![CDATA[<ul><li>Java 编程思想</li><li>Java 并发编程实战</li><li>深入理解 Java 虚拟机</li><li>函数式编程思维</li><li>TCP/IP 详解</li><li>鸟哥的 Linux 私房菜</li><li>Spring MVC ＋mybatis开发从入门到精通</li><li>Spring 技术内幕</li><li>Elasticsearch 服务器开发</li><li>Redis 入门指南</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>书籍推荐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/undefined/4a17b156.html"/>
+    <url>/undefined/4a17b156.html</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="hljs"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span></code></pre></div><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="hljs"><pre><code class="hljs bash">$ hexo server</code></pre></div><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="hljs"><pre><code class="hljs bash">$ hexo generate</code></pre></div><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="hljs"><pre><code class="hljs bash">$ hexo deploy</code></pre></div><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Hello World</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
