@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://98nunc.coding-pages.com/
+url: https://chiccheung.github.io/
 root: /
 permalink: :post/:abbrlink.html
 permalink_defaults:
@@ -102,5 +102,5 @@ abbrlink:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repo: https://e.coding.net/ChicCheung/blog.git
+  repo: https://github.com/chiccheung/chiccheung.github.io.git
   branch: master
