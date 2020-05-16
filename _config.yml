@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://chiccheung.github.io/
+url: https://chiccheung.gitee.io/
 root: /
 permalink: :post/:abbrlink.html
 permalink_defaults:
