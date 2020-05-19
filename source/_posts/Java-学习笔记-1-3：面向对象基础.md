@@ -160,7 +160,7 @@ public class Student {
 
 `JavaBean` 是 Java 语言编写类的一种标准规范。符合 JavaBean 的类，要求类必须是具体的和公共的，并且具有无参数的构造方法，提供用来操作成员变量的 set 和 get 方法。
 
-以学生类为例，标准代码如下：
+以学生类为例，代码如下：
 
 ```java
 /*
@@ -205,6 +205,8 @@ public class Student {
   } 
 }
 ```
+
+
 
 测试类，代码如下：
 
