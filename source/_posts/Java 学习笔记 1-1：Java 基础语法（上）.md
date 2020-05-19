@@ -16,11 +16,20 @@ date: 2020-05-03 12:26:03
 ## 历史背景
 
 - Java 之父 —— James Gosling
-- 1995 年 Java 语言诞生
-- 1996 年 Sun公司 (Stanford University Network) 发布 Java 1.0 
-- 2009 年 Oracle 公司收购 Sun 公司 
-- 2014 年 发布 JDK 8 
-- 截至 2020 年，最新的长期支持版本是 JDK 11 
+- 1995 年 Sun 公司发布 Java1.0 版本
+- 1997 年发布 Java 1.1 版本
+- 1998 年发布 Java 1.2 版本
+- 2000 年发布Java 1.3 版本
+- 2002 年发布 Java 1.4 版本
+- 2004 年发布 Java 1.5 版本
+- 2006 年发布 Java 1.6 版本
+- 2009 年 Oracle 甲骨文公司收购 Sun 公司
+- 2011 年发布 Java 1.7 版本
+- 2014 年发布 Java 1.8 版本
+- 2017 年发布 Java 9.0 版本
+- 2018 年发布 Java 10.0 版本
+- 2018 年发布 Java 11.0 版本
+- 截至 2020 年，最新的长期支持版本为 Java 11.0
 - Java 语言平台包括：
   - Java SE：桌面端开发
   - Java ME：移动端开发（被 Android 替代）
