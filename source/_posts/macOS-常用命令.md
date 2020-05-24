@@ -30,13 +30,13 @@ date: 2020-05-24 18:00:39
 
   
 
--  `/dev/disk2` 重分区
+-  /dev/disk2 重分区
 
   `diskutil partitionDisk /dev/disk2 2 MBR FAT32 "EFI" 200Mi HFS+J "install_osx" R`
 
   
 
-- `/dev/disk2` 重分区
+- /dev/disk2 重分区
 
   `diskutil partitionDisk /dev/disk2 1 MBR FAT32 "SAMSUNG" R`
 
@@ -50,7 +50,7 @@ date: 2020-05-24 18:00:39
 
 ## 配置环境
 
-- 安装 `Apple Command Line Tools`
+- 安装 Apple Command Line Tools
 
   `xcode-select --install`
 
@@ -62,7 +62,7 @@ date: 2020-05-24 18:00:39
 
   
 
-- 安装 `oh-my-zsh`
+- 安装 oh-my-zsh
 
   `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
@@ -103,7 +103,7 @@ date: 2020-05-24 18:00:39
   
   ```
 
-- 为 `zsh` 设置 proxy 函数
+- 为 zsh 设置 proxy 函数
 
   `echo "alias proxy='export all_proxy=socks5://127.0.0.1:7891'" >> ~/.zshrc`
 
@@ -111,13 +111,13 @@ date: 2020-05-24 18:00:39
 
   
 
-- 重载 `zsh` 配置文件
+- 重载 zsh 配置文件
 
   `source ~/.zshrc`
 
   
 
-- 安装 `homebrew`
+- 安装 Homebrew
 
   `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 
@@ -131,7 +131,7 @@ date: 2020-05-24 18:00:39
 
 - 安装 node@12
 
-  `brew install node@12`
+  `brew install node@12`ß
 
   
 
@@ -149,7 +149,7 @@ date: 2020-05-24 18:00:39
 
 ## 安装应用
 
-- 安装 搜狗拼音输入法
+- 安装 Sougou-pinyin
 
   `brew cask install sogouinput`
 
@@ -178,6 +178,12 @@ date: 2020-05-24 18:00:39
 - 安装 Motrix
 
   `brew cask install motrix`
+
+  
+
+- 安装 Baidunetdisk
+
+  `brew cask install baidunetdisk`
 
   
 
