@@ -62,6 +62,12 @@ date: 2020-05-24 18:00:39
 
   
 
+- 关闭休眠以防影响睡眠
+
+  `sudo pmset -a hibernatemode 0`
+
+  
+
 - 安装 oh-my-zsh
 
   `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
@@ -131,7 +137,7 @@ date: 2020-05-24 18:00:39
 
 - 安装 node@12
 
-  `brew install node@12`ß
+  `brew install node@12`
 
   
 
