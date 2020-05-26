@@ -78,8 +78,6 @@ date: 2020-05-24 18:00:39
 
   `git config --global http.https://github.com.proxy socks5://127.0.0.1:7891`
 
-  
-
   `git config --global http.http://github.com.proxy socks5://127.0.0.1:7891`
 
   
@@ -155,11 +153,25 @@ date: 2020-05-24 18:00:39
 
 ## 安装应用
 
-- 安装 Sougou-pinyin
+- 安装常用软件
+
+  ```bash
+brew cask install sogouinput aliwangwang typora upic vlc motrix baidunetdisk visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && conda init "$(basename "${SHELL}")"
+  ```
+
+  
+
+- 安装 搜狗拼音输入法
 
   `brew cask install sogouinput`
 
   `open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app'`
+
+  
+
+- 安装 阿里旺旺
+
+  `brew cask install aliwangwang`
 
   
 
