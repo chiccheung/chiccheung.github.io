@@ -150,7 +150,7 @@ date: 2020-05-24 18:00:39
 - 安装常用软件
 
   ```bash
-brew cask install sogouinput aliwangwang typora upic vlc motrix baidunetdisk visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && conda init "$(basename "${SHELL}")"
+brew cask install sogouinput aliwangwang baidunetdisk typora upic iina motrix vmware-fusion visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && conda init "$(basename "${SHELL}")"
   ```
 
   
@@ -160,6 +160,12 @@ brew cask install sogouinput aliwangwang typora upic vlc motrix baidunetdisk vis
   `brew cask install sogouinput`
 
   `open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app'`
+
+  
+
+- 安装 百度网盘
+
+  `brew cask install baidunetdisk`
 
   
 
@@ -181,9 +187,9 @@ brew cask install sogouinput aliwangwang typora upic vlc motrix baidunetdisk vis
 
   
 
-- 安装 VLC
+- 安装 IINA
 
-  `brew cask install vlc`
+  `brew cask install iina`
 
   
 
@@ -193,9 +199,9 @@ brew cask install sogouinput aliwangwang typora upic vlc motrix baidunetdisk vis
 
   
 
-- 安装 Baidunetdisk
+- 安装 VMware Fusion
 
-  `brew cask install baidunetdisk`
+  `brew cask install vmware-fusion`
 
   
 
