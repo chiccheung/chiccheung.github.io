@@ -150,7 +150,7 @@ date: 2020-05-24 18:00:39
 - 安装常用软件
 
   ```bash
-brew cask install sogouinput aliwangwang baidunetdisk typora upic iina motrix vmware-fusion visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && conda init "$(basename "${SHELL}")"
+brew cask install sogouinput aliwangwang baidunetdisk paper typora upic iina motrix vmware-fusion visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && conda init "$(basename "${SHELL}")"
   ```
 
   
@@ -163,15 +163,21 @@ brew cask install sogouinput aliwangwang baidunetdisk typora upic iina motrix vm
 
   
 
+- 安装 阿里旺旺
+
+  `brew cask install aliwangwang`
+
+  
+
 - 安装 百度网盘
 
   `brew cask install baidunetdisk`
 
   
 
-- 安装 阿里旺旺
+- 安装 pap.er
 
-  `brew cask install aliwangwang`
+  `brew cask install paper`
 
   
 
