@@ -50,116 +50,91 @@ date: 2020-05-24 18:00:39
 
 ## 配置环境
 
-- 安装 Apple Command Line Tools
-
-  `xcode-select --install`
-
-  
-
 - 允许任意来源程序运行
 
-  `sudo spctl --master-disable`
+  ```bash
+sudo spctl --master-disable
+  ```
 
-  
+- 安装 Apple Command Line Tools
+
+  ```bash
+xcode-select --install
+  ```
 
 - 安装 oh-my-zsh
 
-  `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+  ```bash
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 
-  
+- Github 配置 proxy
 
-- Github 设置 proxy
+  ```bash
+  git config --global http.https://github.com.proxy socks5://127.0.0.1:7891 && git config --global http.http://github.com.proxy socks5://127.0.0.1:7891
+  ```
 
-  `git config --global http.https://github.com.proxy socks5://127.0.0.1:7891`
-
-  `git config --global http.http://github.com.proxy socks5://127.0.0.1:7891`
-
-  
-
-- Github 取消 proxy
-
-  `git config --global --unset http.https://github.com.proxy`
-
-  `git config --global --unset http.http://github.com.proxy`
-
-  
+  ```bash
+  git config --global --unset http.https://github.com.proxy && git config --global --unset http.http://github.com.proxy
+  ```
 
 - Git 配置 proxy
 
   ```bash
-  git config --global http.proxy http://127.0.0.1:7890
-  
-  git config --global https.proxy https://127.0.0.1:7890
-  
-  git config --global http.proxy socks5://127.0.0.1:7891
-  
-  git config --global https.proxy socks5://127.0.0.1:7891
-  
-  git config --global --unset http.proxy
-  
-  git config --global --unset https.proxy
-  
+  git config --global http.proxy socks5://127.0.0.1:7891 && git config --global https.proxy socks5://127.0.0.1:7891
   ```
-
+  
+  ```bash
+  git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy https://127.0.0.1:7890
+  ```
+  
+  ```bash
+  git config --global --unset http.proxy && git config --global --unset https.proxy
+  ```
+  
 - 为 zsh 设置 proxy 函数
 
-  `echo "alias proxy='export all_proxy=socks5://127.0.0.1:7891'" >> ~/.zshrc`
-
-  `echo "alias unproxy='unset all_proxy'" >> ~/.zshrc`
-
-  
-
-- 重载 zsh 配置文件
-
-  `source ~/.zshrc`
-
-  
+  ```bash
+echo "alias proxy='export all_proxy=socks5://127.0.0.1:7891'" >> ~/.zshrc && echo "alias unproxy='unset all_proxy'" >> ~/.zshrc && source ~/.zshrc
+  ```
 
 - 安装 Homebrew
 
-  `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  ```
 
   
 
 - 安装 Sourcetree
 
-  `brew cask install sourcetree`
-
-  
+  ```bash
+brew cask install sourcetree
+  ```
 
 - 安装 node@12
 
-  `brew install node@12`
-
-  
-
-- npm 取消 proxy
-
-  `npm config delete proxy`
-
-  
+  ```bash
+brew install node@12 && echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc && echo export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && npm config delete proxy
+  ```
 
 - 安装 Hexo
 
-  `npm install hexo-cli -g`
-
-  
+  ```bash
+npm install hexo-cli -g
+  ```
 
 ## 安装应用
 
 - 安装常用软件
 
   ```bash
-brew cask install sogouinput aliwangwang baidunetdisk paper typora upic iina motrix vmware-fusion visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && conda init "$(basename "${SHELL}")"
+brew cask install sogouinput aliwangwang baidunetdisk paper typora upic iina motrix vmware-fusion visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && echo 'export PATH="/opt/miniconda3/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && conda init "$(basename "${SHELL}")"
   ```
-
-  
 
 - 安装 搜狗拼音输入法
 
-  `brew cask install sogouinput`
-
-  `open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app'`
+  `brew cask install sogouinput && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app'`
 
   
 
