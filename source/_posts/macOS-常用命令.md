@@ -14,37 +14,51 @@ date: 2020-05-24 18:00:39
 
 - 查看磁盘分区
 
-  `sudo diskutil list`
+  ```bash
+  sudo diskutil list
+  ```
 
   
 
 - 挂载 disk0s1 分区
 
-  `sudo diskutil mount disk0s1`
+  ```bash
+  sudo diskutil mount disk0s1
+  ```
 
   
 
 - 卸载 disk0s1 分区
 
-  `sudo diskutil unmount disk0s1`
-
-  
-
--  /dev/disk2 重分区
-
-  `diskutil partitionDisk /dev/disk2 2 MBR FAT32 "EFI" 200Mi HFS+J "install_osx" R`
+  ```bash
+  sudo diskutil unmount disk0s1
+  ```
 
   
 
 - /dev/disk2 重分区
 
-  `diskutil partitionDisk /dev/disk2 1 MBR FAT32 "SAMSUNG" R`
+  ```bash
+  diskutil partitionDisk /dev/disk2 2 MBR FAT32 "EFI" 200Mi HFS+J "install_osx" R
+  ```
+
+  
+
+- /dev/disk2 重分区
+
+  ```bash
+  diskutil partitionDisk /dev/disk2 1 MBR FAT32 "SAMSUNG" R
+  ```
 
   
 
 - 使用 App Store 下载的镜像创建启动盘
 
-  `sudo "/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction`
+  ```bash
+  sudo "/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction
+  ```
+  
+  
 
 
 
@@ -106,16 +120,16 @@ echo "alias proxy='export all_proxy=socks5://127.0.0.1:7891'" >> ~/.zshrc && ech
 
   
 
-- 安装 Sourcetree
+- 安装 Github Desktop
 
   ```bash
-brew cask install sourcetree
+brew cask install github
   ```
 
 - 安装 node@12
 
   ```bash
-brew install node@12 && echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc && echo export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && npm config delete proxy
+brew install node@12 && echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && npm config delete proxy
   ```
 
 - 安装 Hexo
