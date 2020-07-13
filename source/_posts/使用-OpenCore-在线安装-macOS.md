@@ -7,7 +7,6 @@ tags:
 categories: macOS
 index_img: /img/4.jpg
 banner_img: /img/4.jpg
-abbrlink: 65204
 date: 2020-05-20 11:43:01
 ---
 
