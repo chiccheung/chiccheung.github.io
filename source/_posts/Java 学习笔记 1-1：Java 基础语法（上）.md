@@ -7,6 +7,7 @@ tags:
 categories: Java
 index_img: /img/3.jpg
 banner_img: /img/3.jpg
+abbrlink: fef6955d
 date: 2020-05-03 12:26:03
 ---
 
