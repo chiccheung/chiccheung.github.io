@@ -23,13 +23,13 @@ Python是时下最流行、最火爆的编程语言之一，具体原因如下�
 
 1. 简单、易学，适应人群广泛
 
-![image-20190110163249963](https://gitee.com/chiccheung/uPic/raw/master/null/image-20190110163249963.png)
+![1](https://gitee.com/chiccheung/uPic/raw/master/uPic/1.png)
 
 2. 免费、开源
 
 3. 应用领域广泛
 
-![image-20190110162845453](https://gitee.com/chiccheung/uPic/raw/master/null/image-20190110162845453.png)
+![2](https://gitee.com/chiccheung/uPic/raw/master/uPic/2.png)
 
 > 备注：以下知名框架均是Python语言开发。
 
