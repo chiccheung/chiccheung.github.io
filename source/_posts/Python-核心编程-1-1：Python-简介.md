@@ -6,7 +6,7 @@ tags:
   - 学习路线
 categories: Python
 index_img: /img/6.jpg
-banner_img: /img/7.jpg
+banner_img: /img/6.jpg
 abbrlink: d9b9103c
 date: 2020-07-14 13:52:03
 ---
