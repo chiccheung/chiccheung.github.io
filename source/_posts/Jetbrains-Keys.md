@@ -4,7 +4,7 @@ tags:
   - Jetbrains
 author: Chic Cheung
 categories: Jetbrains
-index_img: /img/5.jpg
+index_img: /img/3.jpg
 banner_img: /img/0.jpg
 abbrlink: aa1b805d
 date: 2020-07-13 21:11:34

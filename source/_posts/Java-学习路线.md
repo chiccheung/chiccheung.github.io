@@ -5,8 +5,8 @@ tags:
   - Java
   - 学习路线
 categories: Java
-index_img: /img/2.jpg
-banner_img: /img/2.jpg
+index_img: /img/1.jpg
+banner_img: /img/1.jpg
 abbrlink: b4562164
 date: 2020-05-03 10:53:32
 ---
