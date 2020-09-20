@@ -1,14 +1,8 @@
 ---
 title: Hello World
-date: '2020/5/2 15:40:00'
 author: Chic Cheung
-tags:
-  - Hexo
-  - Hello World
-categories: Hexo
 index_img: /img/0.jpg
 banner_img: /img/0.jpg
-abbrlink: 4a17b156
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
