@@ -4,8 +4,8 @@ author: Chic Cheung
 tags:
   - macOS
 categories: macOS
-index_img: /img/2.jpg
-banner_img: /img/2.jpg
+index_img: /img/1.jpg
+banner_img: /img/1.jpg
 abbrlink: f5c6e166
 date: 2020-05-24 18:00:39
 ---
