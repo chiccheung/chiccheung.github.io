@@ -36,12 +36,11 @@ date: 2020-05-20 11:43:01
 - 获取 `BaseSystem.chunklist`、`BaseSystem.dmg`  
 
   ```bash
-  python3 ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
+  python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download
   ```
 
 - *获取历史镜像可参阅 [recovery_urls.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt) 自行修改*
 - 将 U 盘格式化为 `FAT 32`  格式，在根目录下新建 `com.apple.recovery.boot` 文件夹并将 `BaseSystem.chunklist`、`BaseSystem.dmg` 复制进去
-- 终端下使用 `touch` 命令，在 `com.apple.recovery.boot` 下新建 `.contentDetails` 文件，文件内容会显示为 OpenCore 引导项名称，可自行书写，如：`Install macOS`
 - 将 OpenCore 引导文件复制到 U 盘根目录下
 - 完成后的文件结构如下:
 
@@ -52,8 +51,7 @@ EFI
 com.apple.recovery.boot
     ├── BaseSystem.chunklist
     └── BaseSystem.dmg
-    └── .contentDetails
 ````
 
-- 重启，从 U 盘引导至 OpenCore ，选择 `Install macOS` 开始在线安装
+- 重启，从 U 盘引导至 OpenCore ，按空格显示隐藏选项，选择 `Install macOS` 开始在线安装
 

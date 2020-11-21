@@ -52,15 +52,6 @@ date: 2020-05-24 18:00:39
 
   
 
-- 使用 App Store 下载的镜像创建启动盘
-
-  ```bash
-  sudo "/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction
-  ```
-  
-  
-
-
 
 ## 配置环境
 
@@ -85,7 +76,7 @@ xcode-select --install
 - Github 配置 proxy
 
   ```bash
-  git config --global http.https://github.com.proxy socks5://127.0.0.1:7891 && git config --global http.http://github.com.proxy socks5://127.0.0.1:7891
+  git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 && git config --global http.http://github.com.proxy socks5://127.0.0.1:7890
   ```
 
   ```bash
@@ -95,7 +86,7 @@ xcode-select --install
 - Git 配置 proxy
 
   ```bash
-  git config --global http.proxy socks5://127.0.0.1:7891 && git config --global https.proxy socks5://127.0.0.1:7891
+  git config --global http.proxy socks5://127.0.0.1:7890 && git config --global https.proxy socks5://127.0.0.1:7890
   ```
   
   ```bash
@@ -109,7 +100,7 @@ xcode-select --install
 - 为 zsh 设置 proxy 函数
 
   ```bash
-echo "alias proxy='export all_proxy=socks5://127.0.0.1:7891'" >> ~/.zshrc && echo "alias unproxy='unset all_proxy'" >> ~/.zshrc && source ~/.zshrc
+echo "alias proxy='export all_proxy=socks5://127.0.0.1:7890'" >> ~/.zshrc && echo "alias unproxy='unset all_proxy'" >> ~/.zshrc && source ~/.zshrc
   ```
 
 - 安装 Homebrew
