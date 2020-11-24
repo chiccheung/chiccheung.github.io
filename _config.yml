@@ -6,7 +6,7 @@
 title: 梧桐阶
 subtitle: '未觉池塘春草梦，阶前梧桐已秋声'
 description: "Chic Cheung's Blog"
-keywords: Java, macOS, Jetbrains
+keywords: macOS
 author: Chic Cheung
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -114,13 +114,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# theme: landscape
 theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
-#   type: ''
 deploy:
   type: 'git'
   repo: 

@@ -7,7 +7,6 @@ categories: macOS
 index_img: /img/1.jpg
 banner_img: /img/1.jpg
 abbrlink: f5c6e166
-date: 2020-05-24 18:00:39
 ---
 
 ## 磁盘分区
@@ -70,7 +69,7 @@ xcode-select --install
 - 安装 oh-my-zsh
 
   ```bash
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  export all_proxy=socks5://127.0.0.1:7890 && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
 
 - Github 配置 proxy
@@ -85,12 +84,14 @@ xcode-select --install
 
 - Git 配置 proxy
 
-  ```bash
-  git config --global http.proxy socks5://127.0.0.1:7890 && git config --global https.proxy socks5://127.0.0.1:7890
-  ```
+  
   
   ```bash
   git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy https://127.0.0.1:7890
+  ```
+  
+  ```bash
+  git config --global http.proxy socks5://127.0.0.1:7890 && git config --global https.proxy socks5://127.0.0.1:7890
   ```
   
   ```bash
@@ -109,8 +110,6 @@ echo "alias proxy='export all_proxy=socks5://127.0.0.1:7890'" >> ~/.zshrc && ech
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   ```
 
-  
-
 - 安装 Github Desktop
 
   ```bash
@@ -120,7 +119,7 @@ brew cask install github
 - 安装 node@12
 
   ```bash
-brew install node@12 && echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && npm config delete proxy
+brew install node@12 && echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && npm config set registry https://registry.npm.taobao.org
   ```
 
 - 安装 Hexo
@@ -134,7 +133,7 @@ npm install hexo-cli -g
 - 安装常用软件
 
   ```bash
-brew cask install sogouinput aliwangwang baidunetdisk paper typora upic iina motrix vmware-fusion visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && echo 'export PATH="/opt/miniconda3/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && conda init "$(basename "${SHELL}")"
+brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && echo 'export PATH="/opt/miniconda3/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && conda init "$(basename "${SHELL}")"
   ```
 
 - 安装 搜狗拼音输入法

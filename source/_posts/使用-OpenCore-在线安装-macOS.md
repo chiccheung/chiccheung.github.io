@@ -8,7 +8,6 @@ categories: macOS
 index_img: /img/1.jpg
 banner_img: /img/1.jpg
 abbrlink: c8c18f86
-date: 2020-05-20 11:43:01
 ---
 
 ## 特性
