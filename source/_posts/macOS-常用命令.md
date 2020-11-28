@@ -122,6 +122,18 @@ brew cask install github
 brew install node@12 && echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc && echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && npm config set registry https://registry.npm.taobao.org
   ```
 
+- 设置 npm 为淘宝镜像源
+
+  ```bash
+npm config set registry http://registry.npm.taobao.org/
+  ```
+  
+- 设置 npm 为官方源
+
+  ```bash
+npm config set registry https://registry.npmjs.org/
+  ```
+  
 - 安装 Hexo
 
   ```bash
