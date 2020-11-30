@@ -231,7 +231,7 @@
             <div class="markdown-body">
               <h2 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h2><ul>
 <li><p>查看磁盘分区</p>
-<pre><code class="hljs bash">sudo diskutil list</code></pre>
+<div class="hljs"><pre><code class="hljs bash">sudo diskutil list</code></pre></div>
 
 
 
@@ -239,7 +239,7 @@
 </ul>
 <ul>
 <li><p>挂载 disk0s1 分区</p>
-<pre><code class="hljs bash">sudo diskutil mount disk0s1</code></pre>
+<div class="hljs"><pre><code class="hljs bash">sudo diskutil mount disk0s1</code></pre></div>
 
 
 
@@ -247,7 +247,7 @@
 </ul>
 <ul>
 <li><p>卸载 disk0s1 分区</p>
-<pre><code class="hljs bash">sudo diskutil unmount disk0s1</code></pre>
+<div class="hljs"><pre><code class="hljs bash">sudo diskutil unmount disk0s1</code></pre></div>
 
 
 
@@ -255,7 +255,7 @@
 </ul>
 <ul>
 <li><p>/dev/disk2 重分区</p>
-<pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 2 MBR FAT32 <span class="hljs-string">&quot;EFI&quot;</span> 200Mi HFS+J <span class="hljs-string">&quot;install_osx&quot;</span> R</code></pre>
+<div class="hljs"><pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 2 MBR FAT32 <span class="hljs-string">&quot;EFI&quot;</span> 200Mi HFS+J <span class="hljs-string">&quot;install_osx&quot;</span> R</code></pre></div>
 
 
 
@@ -263,7 +263,7 @@
 </ul>
 <ul>
 <li><p>/dev/disk2 重分区</p>
-<pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 1 MBR FAT32 <span class="hljs-string">&quot;SAMSUNG&quot;</span> R</code></pre>
+<div class="hljs"><pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 1 MBR FAT32 <span class="hljs-string">&quot;SAMSUNG&quot;</span> R</code></pre></div>
 
 
 
@@ -272,55 +272,55 @@
 </ul>
 <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
 <li><p>允许任意来源程序运行</p>
-<pre><code class="hljs bash">sudo spctl --master-disable</code></pre>
+<div class="hljs"><pre><code class="hljs bash">sudo spctl --master-disable</code></pre></div>
 </li>
 <li><p>安装 Apple Command Line Tools</p>
-<pre><code class="hljs bash">xcode-select --install</code></pre>
+<div class="hljs"><pre><code class="hljs bash">xcode-select --install</code></pre></div>
 </li>
 <li><p>安装 oh-my-zsh</p>
-<pre><code class="hljs bash"><span class="hljs-built_in">export</span> all_proxy=socks5://127.0.0.1:7890 &amp;&amp; sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></code></pre>
+<div class="hljs"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> all_proxy=socks5://127.0.0.1:7890 &amp;&amp; sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></code></pre></div>
 </li>
 <li><p>Github 配置 proxy</p>
-<pre><code class="hljs bash">git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global http.http://github.com.proxy socks5://127.0.0.1:7890</code></pre>
+<div class="hljs"><pre><code class="hljs bash">git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global http.http://github.com.proxy socks5://127.0.0.1:7890</code></pre></div>
 
-<pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.https://github.com.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> http.http://github.com.proxy</code></pre>
+<div class="hljs"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.https://github.com.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> http.http://github.com.proxy</code></pre></div>
 </li>
 <li><p>Git 配置 proxy</p>
 </li>
 </ul>
-  <pre><code class="hljs bash">git config --global http.proxy http://127.0.0.1:7890 &amp;&amp; git config --global https.proxy https://127.0.0.1:7890</code></pre>
+  <div class="hljs"><pre><code class="hljs bash">git config --global http.proxy http://127.0.0.1:7890 &amp;&amp; git config --global https.proxy https://127.0.0.1:7890</code></pre></div>
 
-  <pre><code class="hljs bash">git config --global http.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global https.proxy socks5://127.0.0.1:7890</code></pre>
+  <div class="hljs"><pre><code class="hljs bash">git config --global http.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global https.proxy socks5://127.0.0.1:7890</code></pre></div>
 
-  <pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> https.proxy</code></pre>
+  <div class="hljs"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> https.proxy</code></pre></div>
 
 <ul>
 <li><p>为 zsh 设置 proxy 函数</p>
-<pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias proxy=&#x27;export all_proxy=socks5://127.0.0.1:7890&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias unproxy=&#x27;unset all_proxy&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc</code></pre>
+<div class="hljs"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias proxy=&#x27;export all_proxy=socks5://127.0.0.1:7890&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias unproxy=&#x27;unset all_proxy&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc</code></pre></div>
 </li>
 <li><p>安装 Homebrew</p>
-<pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>&quot;</span></code></pre>
+<div class="hljs"><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>&quot;</span></code></pre></div>
 </li>
 <li><p>安装 Github Desktop</p>
-<pre><code class="hljs bash">brew cask install github</code></pre>
+<div class="hljs"><pre><code class="hljs bash">brew cask install github</code></pre></div>
 </li>
 <li><p>安装 node@12</p>
-<pre><code class="hljs bash">brew install node@12 &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/sbin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/node@12/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org</code></pre>
+<div class="hljs"><pre><code class="hljs bash">brew install node@12 &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/sbin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/node@12/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org</code></pre></div>
 </li>
 <li><p>设置 npm 为淘宝镜像源</p>
-<pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry http://registry.npm.taobao.org/</code></pre>
+<div class="hljs"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry http://registry.npm.taobao.org/</code></pre></div>
 </li>
 <li><p>设置 npm 为官方源</p>
-<pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmjs.org/</code></pre>
+<div class="hljs"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmjs.org/</code></pre></div>
 </li>
 <li><p>安装 Hexo</p>
-<pre><code class="hljs bash">npm install hexo-cli -g</code></pre>
+<div class="hljs"><pre><code class="hljs bash">npm install hexo-cli -g</code></pre></div>
 
 </li>
 </ul>
 <h2 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h2><ul>
 <li><p>安装常用软件</p>
-<pre><code class="hljs bash">brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code miniconda &amp;&amp; open <span class="hljs-string">&#x27;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#x27;</span> &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/opt/miniconda3/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; conda init <span class="hljs-string">&quot;<span class="hljs-subst">$(basename <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;SHELL&#125;</span>&quot;</span>)</span>&quot;</span> &amp;&amp; brew install java</code></pre>
+<div class="hljs"><pre><code class="hljs bash">brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code miniconda &amp;&amp; open <span class="hljs-string">&#x27;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#x27;</span> &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/opt/miniconda3/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; conda init <span class="hljs-string">&quot;<span class="hljs-subst">$(basename <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;SHELL&#125;</span>&quot;</span>)</span>&quot;</span> &amp;&amp; brew install java</code></pre></div>
 </li>
 <li><p>安装 搜狗拼音输入法</p>
 <p><code>brew cask install sogouinput &amp;&amp; open &#39;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#39;</code></p>

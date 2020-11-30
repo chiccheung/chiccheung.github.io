@@ -243,10 +243,10 @@
 <li><p>下载 <a target="_blank" rel="noopener" href="https://github.com/chiccheung/HP-Zhan66-Pro14-G2-macOS">OpenCore 引导文件</a></p>
 </li>
 <li><p>下载 <a target="_blank" rel="noopener" href="https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/macrecovery">macrecovery</a></p>
-<pre><code class="hljs bash">curl -OL https://raw.githubusercontent.com/acidanthera/OpenCorePkg/master/Utilities/macrecovery/macrecovery.py</code></pre>
+<div class="hljs"><pre><code class="hljs bash">curl -OL https://raw.githubusercontent.com/acidanthera/OpenCorePkg/master/Utilities/macrecovery/macrecovery.py</code></pre></div>
 </li>
 <li><p>获取 <code>BaseSystem.chunklist</code>、<code>BaseSystem.dmg</code>  </p>
-<pre><code class="hljs bash">python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download</code></pre>
+<div class="hljs"><pre><code class="hljs bash">python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download</code></pre></div>
 </li>
 <li><p><em>获取历史镜像可参阅 <a target="_blank" rel="noopener" href="https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt">recovery_urls.txt</a> 自行修改</em></p>
 </li>
@@ -257,12 +257,12 @@
 <li><p>完成后的文件结构如下:</p>
 </li>
 </ul>
-<pre><code class="hljs bash">EFI
+<div class="hljs"><pre><code class="hljs bash">EFI
     ├── BOOT
     ├── OC
 com.apple.recovery.boot
     ├── BaseSystem.chunklist
-    └── BaseSystem.dmg</code></pre>
+    └── BaseSystem.dmg</code></pre></div>
 
 <ul>
 <li>重启，从 U 盘引导至 OpenCore ，按空格显示隐藏选项，选择 <code>Install macOS</code> 开始在线安装</li>
