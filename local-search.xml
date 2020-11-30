@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/posts/4a17b156/"/>
+    <url>/posts/4a17b156/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Hello World</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>macOS 常用命令</title>
+    <link href="/posts/f5c6e166/"/>
+    <url>/posts/f5c6e166/</url>
+    
+    <content type="html"><![CDATA[<h2 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h2><ul><li><p>查看磁盘分区</p><pre><code class="hljs bash">sudo diskutil list</code></pre></li></ul><ul><li><p>挂载 disk0s1 分区</p><pre><code class="hljs bash">sudo diskutil mount disk0s1</code></pre></li></ul><ul><li><p>卸载 disk0s1 分区</p><pre><code class="hljs bash">sudo diskutil unmount disk0s1</code></pre></li></ul><ul><li><p>/dev/disk2 重分区</p><pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 2 MBR FAT32 <span class="hljs-string">&quot;EFI&quot;</span> 200Mi HFS+J <span class="hljs-string">&quot;install_osx&quot;</span> R</code></pre></li></ul><ul><li><p>/dev/disk2 重分区</p><pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 1 MBR FAT32 <span class="hljs-string">&quot;SAMSUNG&quot;</span> R</code></pre></li></ul><h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul><li><p>允许任意来源程序运行</p><pre><code class="hljs bash">sudo spctl --master-disable</code></pre></li><li><p>安装 Apple Command Line Tools</p><pre><code class="hljs bash">xcode-select --install</code></pre></li><li><p>安装 oh-my-zsh</p><pre><code class="hljs bash"><span class="hljs-built_in">export</span> all_proxy=socks5://127.0.0.1:7890 &amp;&amp; sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></code></pre></li><li><p>Github 配置 proxy</p><pre><code class="hljs bash">git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global http.http://github.com.proxy socks5://127.0.0.1:7890</code></pre><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.https://github.com.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> http.http://github.com.proxy</code></pre></li><li><p>Git 配置 proxy</p></li></ul>  <pre><code class="hljs bash">git config --global http.proxy http://127.0.0.1:7890 &amp;&amp; git config --global https.proxy https://127.0.0.1:7890</code></pre>  <pre><code class="hljs bash">git config --global http.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global https.proxy socks5://127.0.0.1:7890</code></pre>  <pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> https.proxy</code></pre><ul><li><p>为 zsh 设置 proxy 函数</p><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias proxy=&#x27;export all_proxy=socks5://127.0.0.1:7890&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias unproxy=&#x27;unset all_proxy&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc</code></pre></li><li><p>安装 Homebrew</p><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>&quot;</span></code></pre></li><li><p>安装 Github Desktop</p><pre><code class="hljs bash">brew cask install github</code></pre></li><li><p>安装 node@12</p><pre><code class="hljs bash">brew install node@12 &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/sbin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/node@12/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org</code></pre></li><li><p>设置 npm 为淘宝镜像源</p><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry http://registry.npm.taobao.org/</code></pre></li><li><p>设置 npm 为官方源</p><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmjs.org/</code></pre></li><li><p>安装 Hexo</p><pre><code class="hljs bash">npm install hexo-cli -g</code></pre></li></ul><h2 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h2><ul><li><p>安装常用软件</p><pre><code class="hljs bash">brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code miniconda &amp;&amp; open <span class="hljs-string">&#x27;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#x27;</span> &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/opt/miniconda3/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; conda init <span class="hljs-string">&quot;<span class="hljs-subst">$(basename <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;SHELL&#125;</span>&quot;</span>)</span>&quot;</span> &amp;&amp; brew install java</code></pre></li><li><p>安装 搜狗拼音输入法</p><p><code>brew cask install sogouinput &amp;&amp; open &#39;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#39;</code></p></li></ul><ul><li><p>安装 阿里旺旺</p><p><code>brew cask install aliwangwang</code></p></li></ul><ul><li><p>安装 百度网盘</p><p><code>brew cask install baidunetdisk</code></p></li></ul><ul><li><p>安装 pap.er</p><p><code>brew cask install paper</code></p></li></ul><ul><li><p>安装 Typora</p><p><code>brew cask install typora</code></p></li></ul><ul><li><p>安装 uPic</p><p><code>brew cask install upic</code></p></li></ul><ul><li><p>安装 IINA</p><p><code>brew cask install iina</code></p></li></ul><ul><li><p>安装 Motrix</p><p><code>brew cask install motrix</code></p></li></ul><ul><li><p>安装 VMware Fusion</p><p><code>brew cask install vmware-fusion</code></p></li></ul><ul><li><p>安装 Visual Studio Code</p><p><code>brew cask install visual-studio-code</code></p></li></ul><ul><li><p>安装 OpenJDK</p><p><code>brew install java</code></p></li></ul><ul><li><p>安装 Miniconda</p><p><code>brew cask install miniconda</code></p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用 OpenCore 在线安装 macOS</title>
+    <link href="/posts/c8c18f86/"/>
+    <url>/posts/c8c18f86/</url>
+    
+    <content type="html"><![CDATA[<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li>支持各版本的 macOS 的下载安装</li><li>Apple 服务器获取原始镜像文件</li><li>Recovery 文件体积仅 500 MB+</li><li>Python 脚本与生俱来的跨平台特性</li></ul><h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul><li>正常使用的 OpenCore 引导文件</li><li>内置网卡在 macOS 下正常驱动</li></ul><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul><li><p>下载 <a href="https://github.com/chiccheung/HP-Zhan66-Pro14-G2-macOS">OpenCore 引导文件</a></p></li><li><p>下载 <a href="https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/macrecovery">macrecovery</a></p><pre><code class="hljs bash">curl -OL https://raw.githubusercontent.com/acidanthera/OpenCorePkg/master/Utilities/macrecovery/macrecovery.py</code></pre></li><li><p>获取 <code>BaseSystem.chunklist</code>、<code>BaseSystem.dmg</code>  </p><pre><code class="hljs bash">python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download</code></pre></li><li><p><em>获取历史镜像可参阅 <a href="https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt">recovery_urls.txt</a> 自行修改</em></p></li><li><p>将 U 盘格式化为 <code>FAT 32</code>  格式，在根目录下新建 <code>com.apple.recovery.boot</code> 文件夹并将 <code>BaseSystem.chunklist</code>、<code>BaseSystem.dmg</code> 复制进去</p></li><li><p>将 OpenCore 引导文件复制到 U 盘根目录下</p></li><li><p>完成后的文件结构如下:</p></li></ul><pre><code class="hljs bash">EFI    ├── BOOT    ├── OCcom.apple.recovery.boot    ├── BaseSystem.chunklist    └── BaseSystem.dmg</code></pre><ul><li>重启，从 U 盘引导至 OpenCore ，按空格显示隐藏选项，选择 <code>Install macOS</code> 开始在线安装</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+      <tag>OpenCore</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>

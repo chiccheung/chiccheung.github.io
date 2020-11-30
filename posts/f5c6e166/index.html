@@ -1,0 +1,598 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Chic Cheung&#39;s Blog">
+  <meta name="author" content="Chic Cheung">
+  <meta name="keywords" content="macOS">
+  <title>macOS 常用命令 - 梧桐阶</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/ocean.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"|","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>梧桐阶</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="macOS 常用命令">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-30 20:49" pubdate>
+        2020年11月30日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      本文共 625 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      阅读需要 
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">macOS 常用命令</h1>
+            
+            <div class="markdown-body">
+              <h2 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h2><ul>
+<li><p>查看磁盘分区</p>
+<pre><code class="hljs bash">sudo diskutil list</code></pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>挂载 disk0s1 分区</p>
+<pre><code class="hljs bash">sudo diskutil mount disk0s1</code></pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>卸载 disk0s1 分区</p>
+<pre><code class="hljs bash">sudo diskutil unmount disk0s1</code></pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>/dev/disk2 重分区</p>
+<pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 2 MBR FAT32 <span class="hljs-string">&quot;EFI&quot;</span> 200Mi HFS+J <span class="hljs-string">&quot;install_osx&quot;</span> R</code></pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>/dev/disk2 重分区</p>
+<pre><code class="hljs bash">diskutil partitionDisk /dev/disk2 1 MBR FAT32 <span class="hljs-string">&quot;SAMSUNG&quot;</span> R</code></pre>
+
+
+
+
+</li>
+</ul>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
+<li><p>允许任意来源程序运行</p>
+<pre><code class="hljs bash">sudo spctl --master-disable</code></pre>
+</li>
+<li><p>安装 Apple Command Line Tools</p>
+<pre><code class="hljs bash">xcode-select --install</code></pre>
+</li>
+<li><p>安装 oh-my-zsh</p>
+<pre><code class="hljs bash"><span class="hljs-built_in">export</span> all_proxy=socks5://127.0.0.1:7890 &amp;&amp; sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></code></pre>
+</li>
+<li><p>Github 配置 proxy</p>
+<pre><code class="hljs bash">git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global http.http://github.com.proxy socks5://127.0.0.1:7890</code></pre>
+
+<pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.https://github.com.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> http.http://github.com.proxy</code></pre>
+</li>
+<li><p>Git 配置 proxy</p>
+</li>
+</ul>
+  <pre><code class="hljs bash">git config --global http.proxy http://127.0.0.1:7890 &amp;&amp; git config --global https.proxy https://127.0.0.1:7890</code></pre>
+
+  <pre><code class="hljs bash">git config --global http.proxy socks5://127.0.0.1:7890 &amp;&amp; git config --global https.proxy socks5://127.0.0.1:7890</code></pre>
+
+  <pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy &amp;&amp; git config --global --<span class="hljs-built_in">unset</span> https.proxy</code></pre>
+
+<ul>
+<li><p>为 zsh 设置 proxy 函数</p>
+<pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias proxy=&#x27;export all_proxy=socks5://127.0.0.1:7890&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;alias unproxy=&#x27;unset all_proxy&#x27;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc</code></pre>
+</li>
+<li><p>安装 Homebrew</p>
+<pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>&quot;</span></code></pre>
+</li>
+<li><p>安装 Github Desktop</p>
+<pre><code class="hljs bash">brew cask install github</code></pre>
+</li>
+<li><p>安装 node@12</p>
+<pre><code class="hljs bash">brew install node@12 &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/icu4c/sbin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/usr/local/opt/node@12/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org</code></pre>
+</li>
+<li><p>设置 npm 为淘宝镜像源</p>
+<pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry http://registry.npm.taobao.org/</code></pre>
+</li>
+<li><p>设置 npm 为官方源</p>
+<pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmjs.org/</code></pre>
+</li>
+<li><p>安装 Hexo</p>
+<pre><code class="hljs bash">npm install hexo-cli -g</code></pre>
+
+</li>
+</ul>
+<h2 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h2><ul>
+<li><p>安装常用软件</p>
+<pre><code class="hljs bash">brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code miniconda &amp;&amp; open <span class="hljs-string">&#x27;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#x27;</span> &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;/opt/miniconda3/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="hljs-built_in">source</span> ~/.zshrc &amp;&amp; conda init <span class="hljs-string">&quot;<span class="hljs-subst">$(basename <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;SHELL&#125;</span>&quot;</span>)</span>&quot;</span> &amp;&amp; brew install java</code></pre>
+</li>
+<li><p>安装 搜狗拼音输入法</p>
+<p><code>brew cask install sogouinput &amp;&amp; open &#39;/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app&#39;</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 阿里旺旺</p>
+<p><code>brew cask install aliwangwang</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 百度网盘</p>
+<p><code>brew cask install baidunetdisk</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 pap.er</p>
+<p><code>brew cask install paper</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 Typora</p>
+<p><code>brew cask install typora</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 uPic</p>
+<p><code>brew cask install upic</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 IINA</p>
+<p><code>brew cask install iina</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 Motrix</p>
+<p><code>brew cask install motrix</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 VMware Fusion</p>
+<p><code>brew cask install vmware-fusion</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 Visual Studio Code</p>
+<p><code>brew cask install visual-studio-code</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 OpenJDK</p>
+<p><code>brew install java</code></p>
+</li>
+</ul>
+<ul>
+<li><p>安装 Miniconda</p>
+<p><code>brew cask install miniconda</code></p>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/macOS/">macOS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/macOS/">macOS</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/4a17b156/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/c8c18f86/">
+                        <span class="hidden-mobile">使用 OpenCore 在线安装 macOS</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.12.0/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
