@@ -145,7 +145,7 @@ npm install hexo-cli -g
 - 安装常用软件
 
   ```bash
-brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code java miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && echo 'export PATH="/opt/miniconda3/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && conda init "$(basename "${SHELL}")"
+brew cask install sogouinput baidunetdisk paper typora upic iina motrix visual-studio-code miniconda && open '/usr/local/Caskroom/sogouinput/58a,1588947491/sogou_mac_58a.app' && echo 'export PATH="/opt/miniconda3/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc && conda init "$(basename "${SHELL}")" && brew install java
   ```
 
 - 安装 搜狗拼音输入法
